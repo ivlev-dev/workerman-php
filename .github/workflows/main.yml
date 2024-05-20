@@ -34,7 +34,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ivlev1998/workerman-php
+          images: |
+            ivlev1998/workerman-php
+            ghcr.io/${{ github.repository }}
 
       - name: Build and push Docker images
         id: push
