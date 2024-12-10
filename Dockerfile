@@ -1,4 +1,4 @@
-FROM php:8.3.14-alpine
+FROM php:8.4.1-alpine
 
 RUN docker-php-ext-enable opcache
 RUN apk --no-cache add linux-headers && docker-php-ext-install sockets posix pcntl 
